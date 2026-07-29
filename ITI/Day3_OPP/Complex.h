@@ -23,7 +23,7 @@ public:
     void Print();
     friend Complex operator+ (int x, Complex complex);
     friend ostream& operator<<(ostream& obj, Complex c);
-
+    friend istream& operator>>(istream& obj, Complex& c);
 };
 
 
