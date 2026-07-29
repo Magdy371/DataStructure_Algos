@@ -15,7 +15,8 @@ foreach(MAIN_FILE IN LISTS PROJECT_MAIN_FILES)
     string(REPLACE "/" "_" TARGET_NAME "${REL_PATH}")
     string(REPLACE ".cpp" "" TARGET_NAME "${TARGET_NAME}")
 
-    add_executable("${TARGET_NAME}" "${MAIN_FILE}")
+    add_executable("${TARGET_NAME}" "${MAIN_FILE}"
+            ITI/Day2_OPP/Complex.cpp)
     target_include_directories("${TARGET_NAME}" PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}"
     )

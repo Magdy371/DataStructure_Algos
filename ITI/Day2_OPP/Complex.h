@@ -3,7 +3,6 @@
 
 
 class Complex {
-private:
     int _real;
     int _imaginary;
 public:
@@ -13,10 +12,15 @@ public:
     Complex(int real, int imaginary);
     void setReal(int real);
     void setImaginary(int imaginary);
-    int getReal();
-    int getImaginary();
+    [[nodiscard]] int getReal() const;
+    [[nodiscard]] int getImaginary() const;
     //Operator overloading
-    Complex operator+ (const Complex complec);
+    Complex operator+ (Complex complex) const;
+    Complex operator++ ();    //Prefix
+    Complex operator++ (int); //Postfix
+    bool operator>( Complex c);
+    void Print();
+    friend Complex operator+ (int x, Complex complex);
 };
 
 
